@@ -2,10 +2,10 @@ package ds2021;
 
 public class Documentaire extends Film{
 private String sujet;
-private float tarif=2f;
+private float tarif=2.0f;
 
-public Documentaire(String titre,String realisateu,String pays,int duree,String sujet) {
-	super(titre,realisateu,pays,duree);
+public Documentaire(String titre,String realisateur,String pays,int duree,String sujet) {
+	super(titre,realisateur,pays,duree);
 	this.sujet=sujet;
 }
 @Override

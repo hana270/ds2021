@@ -12,7 +12,6 @@ public Film(String titre,String realisateur,String pays,int duree) {
 	this.realisateur=realisateur;
 	this.pays=pays;
 	this.duree=duree;
-	this. nbplaces=0;
 }
 	
 public void setnbPlaces(int nb) {

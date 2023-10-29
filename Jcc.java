@@ -27,7 +27,7 @@ public void listeFilmsJCC () {
 }
 public float totalVenteBilletsJCC() {
 	float mt=0;
-	for(int i=0;i<competition.length;i++) {
+	for(int i=0;i<nbF;i++) {
 		mt=mt+competition[i].totalVenteBillets();
 	}
 	return mt;
