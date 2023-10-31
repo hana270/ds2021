@@ -22,14 +22,18 @@ public void ajoutFilm(Film f) {
 
 public void listeFilmsJCC () {
 	for(int i=0;i<competition.length;i++) {
-		System.out.println(competition[i].toString());
+		if (competition[i] != null) {
+            System.out.println(competition[i].toString());
+        }
 	}
 }
 public float totalVenteBilletsJCC() {
-	float mt=0;
-	for(int i=0;i<nbF;i++) {
-		mt=mt+competition[i].totalVenteBillets();
-	}
-	return mt;
+    float total = 0;
+    for (int i = 0; i < competition.length; i++) {
+    	 if (competition[i] != null)
+        total = total + competition[i].totalVenteBillets();
+    }
+    return total;
 }
+
 }

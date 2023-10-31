@@ -27,16 +27,18 @@ public String toString() {
 }
 
 
-public float totalVenteBillets() {
-	Scanner sc = new Scanner(System. in);
-	System.out.println("Saisir le nombre des étudients : ");
-	int nb = sc.nextInt();
-	while (nb > this.nbplaces) {
-        System.out.print("Re-saisir le nombre d'étudiants (doit être inférieur ou égal au nombre de places réservées) : ");
-        nb = sc.nextInt();
-    }
+public float totalVenteBillets() {	
+	Scanner sc = new Scanner(System.in);
 	
-	return (nb*2)+(3*(this.nbplaces-nb));
+	int nb_etudiant=0;
+	do{
+	System.out.print("saisir le nombre des etudiants: ");
+	 nb_etudiant = sc.nextInt();
+	 }while((nb_etudiant<0)&&(nb_etudiant>nbplaces));
+
+	int nbpublic=this.nbplaces-nb_etudiant;
+	return nb_etudiant*2+3*nbpublic;
+	
 }
 
 }
